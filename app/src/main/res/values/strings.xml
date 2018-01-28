@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Home Repair</string>
+
+    <!-- Activity Login -->
+    <string name="text_acceso">Acceso</string>
+    <string name="hint_usuario">Usuario</string>
+    <string name="hint_constrasegna">Contrase"\u00F1"a</string>
+    <string name="text_ingresar">Ingresar</string>
+    <string name="link_registro">¿A"\u00FA"n no est"\u00E1"s registrado? Reg"\u00ED"strate</string>
 </resources>
