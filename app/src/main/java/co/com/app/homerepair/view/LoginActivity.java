@@ -1,19 +1,23 @@
-package co.com.app.homerepair;
+package co.com.app.homerepair.view;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import co.com.app.homerepair.view.LoginView;
+import co.com.app.homerepair.R;
 
-public class LoginActivity extends AppCompatActivity implements LoginView {
+public class LoginActivity extends AppCompatActivity implements ILoginView {
 
     @BindView(R.id.link_registro)
     TextView _registroLink;
+
+    @BindView(R.id.button_ingresar)
+    AppCompatButton _ingresarButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,13 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
             @Override
             public void onClick(View view) {
                 startRegistroActivity();
+            }
+        });
+
+        _ingresarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // TODO Ingresar. Not implemented yet;
             }
         });
     }

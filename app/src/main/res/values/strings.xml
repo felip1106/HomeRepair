@@ -4,14 +4,29 @@
     <!-- Strings relacionados al login -->
     <string name="text_acceso">Acceso</string>
     <string name="hint_usuario">Usuario</string>
-    <string name="hint_constrasegna">Contrase"\u00F1"a</string>
+    <string name="hint_contrasegna">Contrase"\u00F1"a</string>
     <string name="text_ingresar">Ingresar</string>
     <string name="text_pregunta_registro">¿A"\u00FA"n no est"\u00E1"s registrado?</string>
     <string name="link_registro">Reg"\u00ED"strate</string>
 
-    <!-- Strings relacionados al registro -->
+    <!-- Strings relacionados al registro comun -->
     <string name="text_registro">Registro</string>
     <string name="text_tipo_registro">Seleccione el tipo de usuario</string>
-    <string name="item_array_tipo_registro_proveedor">Proveedor</string>
-    <string name="item_array_tipo_registro_cliente">Cliente</string>
+    <string name="text_tipo_registro_proveedor">Proveedor</string>
+    <string name="text_tipo_registro_cliente">Cliente</string>
+    <string name="hint_usuario_registro">Usuario</string>
+    <string name="hint_contrasegna_registro">Contrase"\u00F1"a</string>
+    <string name="hint_email_registro">Email</string>
+    <string name="hint_telefono_registro">Telefono</string>
+    <string name="hint_direccion_registro">Direcci"\u00F3"n</string>
+
+    <!-- Strings relacionados al registro del cliente -->
+    <string name="hint_nombres_registro">Nombres</string>
+    <string name="hint_apellidos_registro">Apellidos</string>
+    <string name="hint_fecha_nacimiento_registro">Fecha de nacimiento</string>
+    
+    <!-- Strings relacionados al registro del proveedor -->
+    <string name="hint_razon_social_registro">Raz"\u00F3"n social</string>
+
+
 </resources>

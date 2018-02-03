@@ -113,7 +113,7 @@ public class DaoGeneratorImpl {
 
     private static void addUsuariosProperties(Entity usuarios) {
         usuarios.addIdProperty().primaryKey().autoincrement();
-        usuarios.addStringProperty("usu_nombre");
+        usuarios.addStringProperty("usu_nombre").unique();
         usuarios.addStringProperty("usu_pass");
         usuarios.addByteArrayProperty("usu_img_perfil");
         usuarios.addStringProperty("usu_estado");

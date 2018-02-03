@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="24dp"
     android:paddingRight="24dp"
-    tools:context="co.com.app.homerepair.LoginActivity">
+    tools:context="co.com.app.homerepair.view.LoginActivity">
 
     <!-- Logo de inicio -->
     <ImageView
@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="50dp"
-        android:paddingTop="50dp"
+        android:paddingTop="20dp"
         android:scaleType="fitXY"
         android:src="@mipmap/ic_logo_mini"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -70,7 +70,7 @@
             android:id="@+id/input_contrasegna"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_constrasegna"
+            android:hint="@string/hint_contrasegna"
             android:inputType="textPassword"
             android:maxLines="1"
             android:singleLine="true" />

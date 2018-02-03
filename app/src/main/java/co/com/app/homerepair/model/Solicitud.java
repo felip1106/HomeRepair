@@ -1,16 +1,21 @@
 package co.com.app.homerepair.model;
 
-import org.greenrobot.greendao.annotation.*;
+import org.greenrobot.greendao.DaoException;
+import org.greenrobot.greendao.annotation.Entity;
+import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Id;
+import org.greenrobot.greendao.annotation.JoinProperty;
+import org.greenrobot.greendao.annotation.ToMany;
+import org.greenrobot.greendao.annotation.ToOne;
 
 import java.util.List;
-import co.com.app.homerepair.dao.DaoSession;
-import org.greenrobot.greendao.DaoException;
 
 import co.com.app.homerepair.dao.AdjuntoSolicitudDao;
 import co.com.app.homerepair.dao.CategoriaDao;
 import co.com.app.homerepair.dao.ClientesDao;
 import co.com.app.homerepair.dao.ComentarioDao;
 import co.com.app.homerepair.dao.CotizacionDao;
+import co.com.app.homerepair.dao.DaoSession;
 import co.com.app.homerepair.dao.EstadoSolicitudDao;
 import co.com.app.homerepair.dao.SolicitudDao;
 

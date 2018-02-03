@@ -1,0 +1,168 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="co.com.app.homerepair.view.fragment.RegistroClienteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Input de usuario -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_input_usuario_registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <EditText
+                android:id="@+id/input_usuario_registro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_usuario_registro"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Input de contraseña -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_input_contrasegna_registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorAccent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_input_nombres_registro">
+
+            <EditText
+                android:id="@+id/input_contrasegna_registro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_contrasegna_registro"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Input de nombres -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_input_nombres_registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_input_contrasegna_registro">
+
+            <EditText
+                android:id="@+id/input_nombres_registro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_nombres_registro"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="false" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Input de apellidos -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_input_apellidos_registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_input_nombres_registro">
+
+            <EditText
+                android:id="@+id/input_apellidos_registro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_apellidos_registro"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="false" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Input de email -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_input_email_registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_input_apellidos_registro">
+
+            <EditText
+                android:id="@+id/input_email_registro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_email_registro"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Input de telefono -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_input_telefono_registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_input_email_registro">
+
+            <EditText
+                android:id="@+id/input_telefono_registro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_telefono_registro"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Input de direccion -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_input_direccion_registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_input_telefono_registro">
+
+            <EditText
+                android:id="@+id/input_direccion_registro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_direccion_registro"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Input de fecha de nacimiento -->
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layout_input_fecha_nacimiento_registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_input_direccion_registro">
+
+            <EditText
+                android:id="@+id/input_fecha_nacimiento_registro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="@string/hint_fecha_nacimiento_registro"
+                android:inputType="date"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+</ScrollView>

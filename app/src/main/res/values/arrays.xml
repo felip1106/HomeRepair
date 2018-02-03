@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Arrays de los tipos de registro -->
-    <string-array name="array_tipo_registro">
-        <item>@string/item_array_tipo_registro_cliente</item>
-        <item>@string/item_array_tipo_registro_proveedor</item>
-    </string-array>
-</resources>

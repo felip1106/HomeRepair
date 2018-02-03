@@ -1,0 +1,61 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="co.com.app.homerepair.view.fragment.RegistroUsuarioFragment">
+
+    <!-- Label de seleccionde tipo de registro -->
+    <TextView
+        android:id="@+id/text_seleccion_registro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_tipo_registro"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Logo de cliente -->
+        <ImageView
+            android:id="@+id/image_customer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_customer"
+            tools:ignore="ContentDescription" />
+
+        <!-- Label de registro de cliente -->
+        <TextView
+            android:id="@+id/text_tipo_registro_cliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_tipo_registro_cliente"
+            android:textSize="18sp" />
+
+        <!-- Logo de proveedor -->
+        <ImageView
+            android:id="@+id/image_worker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_worker"
+            tools:ignore="ContentDescription" />
+
+        <!-- Label de registro de proveedor -->
+        <TextView
+            android:id="@+id/text_tipo_registro_proveedor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_tipo_registro_proveedor"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</FrameLayout>

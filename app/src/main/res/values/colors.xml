@@ -3,5 +3,7 @@
     <color name="colorPrimary">#1fb8a7</color>
     <color name="colorPrimaryDark">#1ea594</color>
     <color name="colorAccent">#19a397</color>
-    <color name="colorTextButton">#FFFFFF</color>
+    <color name="colorTextButton">#ffffff</color>
+    <color name="colorTintSpinner">#747474</color>
+    <color name="colorFab">#26d19f</color>
 </resources>
