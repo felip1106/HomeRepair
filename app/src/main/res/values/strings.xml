@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">Home Repair</string>
+    <string name="registro_label">Registro</string>
+
+    <!-- String relacionados a mensajes generales de la app -->
+    <string name="MSG_LOGIN_FALLIDO">Login fallido</string>
+    <string name="MSG_REGISTRO_FALLIDO">Registro fallido</string>
+    <string name="MSG_LOGIN_USUARIO_VACIO">Ingrese un usuario</string>
+    <string name="MSG_LOGIN_PASSWORD_VACIO">Ingrese una contrase"\u00F1"a</string>
+    <string name="MSG_LOGIN_PROGRESS_DIALOG">Autenticando...</string>
+    <string name="MSG_REGISTRO_PROGRESS_DIALOG">Creando cuenta...</string>
+    <string name="MSG_LOGIN_CREDENCIALES_NO_VALIDAS">El usuario y/o la contrase"\u00F1"a no son v"\u00E1"lidos</string>
+    <string name="MSG_CONSTRAINT_UNIQUE_USUARIO">El usuario ya se encuentra registrado</string>
+    <string name="MSG_REGISTRO_USUARIO_EXITO">El usuario fue registrado</string>
+    <string name="MSG_REGISTRO_PASSWORD_LENGTH">La contrase"\u00F1"a debe contener m"\u00ED"nimo 6 caracteres alfanum"\u00E9"ricos</string>
 
     <!-- Strings relacionados al login -->
     <string name="text_acceso">Acceso</string>
@@ -11,6 +24,7 @@
 
     <!-- Strings relacionados al registro comun -->
     <string name="text_registro">Registro</string>
+    <string name="label_tipo_registro">Tipo de Usuario</string>
     <string name="text_tipo_registro">Seleccione el tipo de usuario</string>
     <string name="text_tipo_registro_proveedor">Proveedor</string>
     <string name="text_tipo_registro_cliente">Cliente</string>
@@ -19,14 +33,21 @@
     <string name="hint_email_registro">Email</string>
     <string name="hint_telefono_registro">Telefono</string>
     <string name="hint_direccion_registro">Direcci"\u00F3"n</string>
+    <string name="label_login">Login</string>
+    <string name="label_datos_basicos">Datos b"\u00E1"sicos</string>
 
     <!-- Strings relacionados al registro del cliente -->
     <string name="hint_nombres_registro">Nombres</string>
     <string name="hint_apellidos_registro">Apellidos</string>
     <string name="hint_fecha_nacimiento_registro">Fecha de nacimiento</string>
-    
+
     <!-- Strings relacionados al registro del proveedor -->
     <string name="hint_razon_social_registro">Raz"\u00F3"n social</string>
 
+    <!-- Strings relacionados al menu principal -->
+    <string name="text_menu_principal">Men"\u00FA" Principal</string>
+    <string name="text_acerca_de">Acerca de...</string>
+    <string name="text_home_repair_descripcion">Home Repair es una app que permite solicitar asistencia de servicios de reparaci"\u00F3"n y mantenimiento para el hogar a trav"\u00E9"s de un gran n"\u00FA"mero de profesionales en el "\u00E1"rea dispuestos a resolver su problema.</string>
+    <string name="button_cerrar">Cerrar</string>
 
 </resources>
