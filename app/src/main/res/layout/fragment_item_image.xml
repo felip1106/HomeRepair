@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true"
     android:orientation="horizontal">
 
     <!-- Logo de item de la imagen -->
@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/image_load__margin"
         android:adjustViewBounds="true"
-        android:scaleType="fitXY" />
+        android:scaleType="centerInside"
+        android:background="@drawable/ic_image_backgroung"/>
 
 </LinearLayout>

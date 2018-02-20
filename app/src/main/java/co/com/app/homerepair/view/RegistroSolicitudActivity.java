@@ -80,8 +80,8 @@ public class RegistroSolicitudActivity extends AppCompatActivity implements IReg
     private static final int REQUEST_CAMERA = 1;
     private static final int SELECT_FILE = 2;
     private static final String TYPE_IMAGE_GALLERY = "image/*";
-    private static final int IMAGE_WIDTH = 300;
-    private static final int IMAGE_HEIGHT = 300;
+    private static final int IMAGE_WIDTH = 400;
+    private static final int IMAGE_HEIGHT = 500;
     private static final String FORMAT_EXT_IMAGE = "jpg";
     private ImageView imageSelected;
     private DialogFragment categoriaDialog;
@@ -95,7 +95,7 @@ public class RegistroSolicitudActivity extends AppCompatActivity implements IReg
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AndroidInjection.inject(this);
-        setContentView(R.layout.activity_crea_solicitud);
+        setContentView(R.layout.activity_registro_solicitud);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ButterKnife.bind(this);
 

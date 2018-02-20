@@ -23,7 +23,7 @@ public class ImagenContent {
      */
     private static final Map<String, Item> ITEM_MAP = new HashMap<>();
 
-    private static final int COUNT = 6;
+    private static final int COUNT = 4;
 
     static {
         // Add some sample items.

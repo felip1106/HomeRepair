@@ -12,7 +12,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:scaleType="fitXY" />
+        android:scaleType="fitXY"
+        android:layout_marginLeft="@dimen/menu_horizontal_margin"
+        android:layout_marginRight="@dimen/menu_horizontal_margin"
+        android:layout_marginTop="@dimen/menu_horizontal_margin"
+        android:layout_marginBottom="@dimen/menu_horizontal_margin"/>
 
     <!-- Item -->
     <TextView
@@ -20,8 +24,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:layout_marginLeft="@dimen/menu_horizontal_margin"
-        android:layout_marginRight="@dimen/menu_horizontal_margin"
         android:layout_gravity="center_vertical"
         android:textAppearance="?attr/textAppearanceListItem" />
 </LinearLayout>

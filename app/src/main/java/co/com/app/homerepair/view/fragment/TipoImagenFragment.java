@@ -78,6 +78,7 @@ public class TipoImagenFragment extends DialogFragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
+
             recyclerView.setAdapter(new ItemTipoImagenAdapter(TipoImagenContent.ITEMS, mListener));
         }
         return new AlertDialog.Builder(getActivity()).setTitle(R.string.text_agnadir_imagen).setView(view).setNegativeButton(R.string.MSG_CANCELAR, new DialogInterface.OnClickListener() {

@@ -10,5 +10,6 @@
     <color name="colorAccentDialog">#ffffff</color>
     <color name="backgroundDialog">#15b3a1</color>
     <color name="textColorPrimaryDialog">#cccccc</color>
+    <color name="colorImageBackground">#d7f4f1</color>
 
 </resources>

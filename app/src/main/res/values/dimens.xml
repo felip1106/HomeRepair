@@ -10,5 +10,5 @@
     <dimen name="image_load__margin">2dp</dimen>
     <dimen name="grid_padding">2dp</dimen>
     <dimen name="menu_padding">10dp</dimen>
-    <dimen name="menu_horizontal_margin">15dp</dimen>
+    <dimen name="menu_horizontal_margin">13dp</dimen>
 </resources>
