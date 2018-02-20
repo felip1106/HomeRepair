@@ -23,7 +23,7 @@ import dagger.android.support.AndroidSupportInjection;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link OnFragmentInteractionListener} interface
+ * {@link RegistroProveedorFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
  * Use the {@link RegistroProveedorFragment#newInstance} factory method to
  * create an instance of this fragment.

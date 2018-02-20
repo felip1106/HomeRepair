@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -16,6 +15,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import co.com.app.homerepair.R;
+import co.com.app.homerepair.controller.AppController;
 import co.com.app.homerepair.model.Usuarios;
 import co.com.app.homerepair.presenter.ILoginPresenter;
 import co.com.app.homerepair.utils.AESCipher;
@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
     ILoginPresenter loginPresenter;
 
     @BindView(R.id.input_usuario)
-    AutoCompleteTextView _usuarioText;
+    EditText _usuarioText;
 
     @BindView(R.id.input_contrasegna)
     EditText _contrasegnaText;
@@ -57,6 +57,7 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
     public void startPrincipalActivity() {
         Intent intent = new Intent(this, PrincipalActivity.class);
         startActivity(intent);
+        ((AppController)application).setUsuarios(usuarios);
     }
 
     @Override
@@ -122,6 +123,7 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
                 R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage(getString(R.string.MSG_LOGIN_PROGRESS_DIALOG));
+        progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
 
         usuarios = loginPresenter.findUsuarioByNombrePassword(_usuarioText.getText().toString(), encriptarPassword(_contrasegnaText.getText().toString()), application.getApplicationContext());

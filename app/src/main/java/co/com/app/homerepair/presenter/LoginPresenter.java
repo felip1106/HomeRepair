@@ -6,7 +6,6 @@ import co.com.app.homerepair.controller.AppController;
 import co.com.app.homerepair.dao.UsuariosDao;
 import co.com.app.homerepair.model.Usuarios;
 import co.com.app.homerepair.view.ILoginView;
-import co.com.app.homerepair.view.IRegistroView;
 
 /**
  * Created by jfmg9029 on 13/02/2018.
@@ -16,7 +15,7 @@ public class LoginPresenter<V extends ILoginView> implements ILoginPresenter<V> 
 
     @Override
     public Usuarios findUsuarioByNombrePassword(String nombre, String password, Context context) {
-        Usuarios usuarios = null;
+        Usuarios usuarios;
 
         UsuariosDao usuariosDao = ((AppController)context).getDaoSession().getUsuariosDao();
         usuarios = usuariosDao.queryBuilder()

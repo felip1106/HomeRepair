@@ -3,6 +3,7 @@ package co.com.app.homerepair.view.fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,10 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import co.com.app.homerepair.R;
-import co.com.app.homerepair.view.fragment.dummy.DummyContent;
-import co.com.app.homerepair.view.fragment.dummy.DummyContent.DummyItem;
-
-import java.util.List;
+import co.com.app.homerepair.view.adapter.ItemMenuAdapter;
+import co.com.app.homerepair.view.fragment.content.MenuPrincipalContent;
 
 /**
  * A fragment representing a list of Items.
@@ -59,7 +58,7 @@ public class MenuPrincipalFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_item_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_item_menu_list, container, false);
 
         // Set the adapter
         if (view instanceof RecyclerView) {
@@ -70,7 +69,8 @@ public class MenuPrincipalFragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new MyItemRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+            recyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));
+            recyclerView.setAdapter(new ItemMenuAdapter(MenuPrincipalContent.ITEMS, mListener));
         }
         return view;
     }
@@ -105,6 +105,6 @@ public class MenuPrincipalFragment extends Fragment {
      */
     public interface OnListFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onListFragmentInteraction(DummyItem item);
+        void onListFragmentInteraction(MenuPrincipalContent.Item item);
     }
 }

@@ -57,8 +57,8 @@ public class AdjuntoSolicitudDao extends AbstractDao<AdjuntoSolicitud, Long> {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"ADJUNTO_SOLICITUD\" (" + //
                 "\"_id\" INTEGER PRIMARY KEY ," + // 0: id
-                "\"SOL_ID\" INTEGER UNIQUE ," + // 1: sol_id
-                "\"ADJ_ID\" INTEGER UNIQUE );"); // 2: adj_id
+                "\"SOL_ID\" INTEGER," + // 1: sol_id
+                "\"ADJ_ID\" INTEGER);"); // 2: adj_id
         // Add Indexes
         db.execSQL("CREATE INDEX " + constraint + "IDX_ADJUNTO_SOLICITUD_SOL_ID ON ADJUNTO_SOLICITUD" +
                 " (\"SOL_ID\");");

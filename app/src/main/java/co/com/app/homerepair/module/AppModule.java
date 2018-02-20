@@ -3,15 +3,20 @@ package co.com.app.homerepair.module;
 import android.app.Application;
 
 import co.com.app.homerepair.controller.AppController;
+import co.com.app.homerepair.model.Categoria;
 import co.com.app.homerepair.model.Clientes;
 import co.com.app.homerepair.model.Proveedor;
+import co.com.app.homerepair.model.Solicitud;
 import co.com.app.homerepair.model.Usuarios;
 import co.com.app.homerepair.presenter.ILoginPresenter;
 import co.com.app.homerepair.presenter.IRegistroPresenter;
+import co.com.app.homerepair.presenter.ISolicitudPresenter;
 import co.com.app.homerepair.presenter.LoginPresenter;
 import co.com.app.homerepair.presenter.RegistroPresenter;
+import co.com.app.homerepair.presenter.SolicitudPresenter;
 import co.com.app.homerepair.view.LoginActivity;
 import co.com.app.homerepair.view.RegistroActivity;
+import co.com.app.homerepair.view.RegistroSolicitudActivity;
 import co.com.app.homerepair.view.fragment.RegistroClienteFragment;
 import co.com.app.homerepair.view.fragment.RegistroProveedorFragment;
 import dagger.Binds;
@@ -37,6 +42,9 @@ public abstract class AppModule {
     abstract LoginActivity contributeLoginActivityInjector();
 
     @ContributesAndroidInjector
+    abstract RegistroSolicitudActivity contributeCreaSolicitudActivityInjector();
+
+    @ContributesAndroidInjector
     abstract RegistroClienteFragment contributeRegistroClienteFragmentInjector();
 
     @ContributesAndroidInjector
@@ -53,6 +61,11 @@ public abstract class AppModule {
     }
 
     @Provides
+    static ISolicitudPresenter provideSolicitudPresenter() {
+        return new SolicitudPresenter();
+    }
+
+    @Provides
     static Usuarios provideUsuario() {
         return new Usuarios();
     }
@@ -65,6 +78,16 @@ public abstract class AppModule {
     @Provides
     static Proveedor provideProveedor() {
         return new Proveedor();
+    }
+
+    @Provides
+    static Solicitud provideSolicitud() {
+        return new Solicitud();
+    }
+
+    @Provides
+    static Categoria provideCategoria() {
+        return new Categoria();
     }
 
 }

@@ -7,12 +7,18 @@
     <string name="MSG_REGISTRO_FALLIDO">Registro fallido</string>
     <string name="MSG_LOGIN_USUARIO_VACIO">Ingrese un usuario</string>
     <string name="MSG_LOGIN_PASSWORD_VACIO">Ingrese una contrase"\u00F1"a</string>
-    <string name="MSG_LOGIN_PROGRESS_DIALOG">Autenticando...</string>
-    <string name="MSG_REGISTRO_PROGRESS_DIALOG">Creando cuenta...</string>
+    <string name="MSG_LOGIN_PROGRESS_DIALOG">Autenticando"\u002E\u002E\u002E"</string>
+    <string name="MSG_REGISTRO_PROGRESS_DIALOG">Creando cuenta"\u002E\u002E\u002E"</string>
     <string name="MSG_LOGIN_CREDENCIALES_NO_VALIDAS">El usuario y/o la contrase"\u00F1"a no son v"\u00E1"lidos</string>
     <string name="MSG_CONSTRAINT_UNIQUE_USUARIO">El usuario ya se encuentra registrado</string>
     <string name="MSG_REGISTRO_USUARIO_EXITO">El usuario fue registrado</string>
     <string name="MSG_REGISTRO_PASSWORD_LENGTH">La contrase"\u00F1"a debe contener m"\u00ED"nimo 6 caracteres alfanum"\u00E9"ricos</string>
+    <string name="MSG_SOLICITUD_CATEGORIA_VACIO">Debe seleccionar una categor"\u00ED"a</string>
+    <string name="MSG_SOLICITUD_DESCRIPCION_VACIO">Debe ingresar una descripcion</string>
+    <string name="MSG_SOLICITUD_REGISTRO_PROGRESS_DIALOG">Registrando solicitud"\u002E\u002E\u002E"</string>
+    <string name="MSG_SOLICITUD_REGISTRO_EXITO">La solicitud fue registrada</string>
+    <string name="MSG_CERRAR">Cerrar</string>
+    <string name="MSG_CANCELAR">Cancelar</string>
 
     <!-- Strings relacionados al login -->
     <string name="text_acceso">Acceso</string>
@@ -46,8 +52,24 @@
 
     <!-- Strings relacionados al menu principal -->
     <string name="text_menu_principal">Men"\u00FA" Principal</string>
-    <string name="text_acerca_de">Acerca de...</string>
-    <string name="text_home_repair_descripcion">Home Repair es una app que permite solicitar asistencia de servicios de reparaci"\u00F3"n y mantenimiento para el hogar a trav"\u00E9"s de un gran n"\u00FA"mero de profesionales en el "\u00E1"rea dispuestos a resolver su problema.</string>
-    <string name="button_cerrar">Cerrar</string>
+    <string name="text_acerca_de">Acerca de"\u002E\u002E\u002E"</string>
+    <string name="text_home_repair_version">Home Repair Versi"\u00F3"n 2.5.0</string>
+    <string name="text_home_repair_author">Desarrollado por: \nJuan Felipe Mosquera\nJhon Henry G"\u00F3"mez</string>
+    <string name="item_crear_solicitud">Crear Solicitud</string>
+    <string name="item_ver_solicitudes">Ver Solicitudes</string>
+    <string name="item_editar_informacion">Editar Informaci"\u00F3"n</string>
+    <string name="item_cerrar_sesion">Cerrar Sesi"\u00F3"n</string>
+
+    <!-- Strings relacionados a la creacion de la solicitud -->
+    <string name="text_crear_solicitud">Crear Solicitud</string>
+    <string name="hint_categoria_solicitud">Seleccione una categor"\u00ED"a</string>
+    <string name="hint_descripcion_solicitud">Describe tu solicitud</string>
+    <string name="label_fotografia">Adiciona fotograf"\u00ED"as</string>
+    <string name="text_agnadir_imagen">Añadir imagen</string>
+    <string name="text_toma_fotografia">Toma una fotograf"\u00ED"a</string>
+    <string name="text_selecciona_galeria">Selecciona una imagen de la galer"\u00ED"a</string>
+    <string name="text_selecciona_imagen_galeria">Seleccione una imagen</string>
+    <string name="text_registrar_solicitud">Registrar</string>
+    <string name="text_seleccion_categoria">Categor"\u00ED"a</string>
 
 </resources>

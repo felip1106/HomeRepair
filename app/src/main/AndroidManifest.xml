@@ -2,10 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="co.com.app.homerepair">
 
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".controller.AppController"
@@ -19,6 +20,7 @@
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -28,6 +30,10 @@
             android:label="@string/registro_label"
             android:parentActivityName=".view.LoginActivity" />
         <activity android:name=".view.PrincipalActivity" />
+        <activity
+            android:name=".view.RegistroSolicitudActivity"
+            android:label="@string/text_crear_solicitud"
+            android:parentActivityName=".view.PrincipalActivity" />
     </application>
 
 </manifest>

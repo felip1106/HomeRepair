@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/menu_padding"
+    android:paddingRight="@dimen/menu_padding"
+    android:orientation="horizontal">
+
+    <!-- Logo de item del menu -->
+    <ImageView
+        android:id="@+id/icon_item_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitXY" />
+
+    <!-- Item -->
+    <TextView
+        android:id="@+id/message_item_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginLeft="@dimen/menu_horizontal_margin"
+        android:layout_marginRight="@dimen/menu_horizontal_margin"
+        android:layout_gravity="center_vertical"
+        android:textAppearance="?attr/textAppearanceListItem" />
+</LinearLayout>

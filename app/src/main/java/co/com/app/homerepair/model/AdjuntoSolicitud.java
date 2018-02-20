@@ -6,7 +6,6 @@ import org.greenrobot.greendao.annotation.Generated;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Index;
 import org.greenrobot.greendao.annotation.ToOne;
-import org.greenrobot.greendao.annotation.Unique;
 
 import co.com.app.homerepair.dao.AdjuntoDao;
 import co.com.app.homerepair.dao.AdjuntoSolicitudDao;
@@ -27,11 +26,9 @@ public class AdjuntoSolicitud {
     @Id
     private Long id;
 
-    @Unique
     @Index
     private Long sol_id;
 
-    @Unique
     @Index
     private Long adj_id;
 

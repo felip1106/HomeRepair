@@ -15,7 +15,7 @@ import co.com.app.homerepair.model.Rol;
 
 /**
  * DAO for table "ROL".
- */
+*/
 public class RolDao extends AbstractDao<Rol, Long> {
 
     public static final String TABLENAME = "ROL";
@@ -36,7 +36,7 @@ public class RolDao extends AbstractDao<Rol, Long> {
     public RolDao(DaoConfig config) {
         super(config);
     }
-
+    
     public RolDao(DaoConfig config, DaoSession daoSession) {
         super(config, daoSession);
         this.daoSession = daoSession;
@@ -60,17 +60,17 @@ public class RolDao extends AbstractDao<Rol, Long> {
     @Override
     protected final void bindValues(DatabaseStatement stmt, Rol entity) {
         stmt.clearBindings();
-
+ 
         Long id = entity.getId();
         if (id != null) {
             stmt.bindLong(1, id);
         }
-
+ 
         String rol_nombre = entity.getRol_nombre();
         if (rol_nombre != null) {
             stmt.bindString(2, rol_nombre);
         }
-
+ 
         String rol_estado = entity.getRol_estado();
         if (rol_estado != null) {
             stmt.bindString(3, rol_estado);
@@ -80,17 +80,17 @@ public class RolDao extends AbstractDao<Rol, Long> {
     @Override
     protected final void bindValues(SQLiteStatement stmt, Rol entity) {
         stmt.clearBindings();
-
+ 
         Long id = entity.getId();
         if (id != null) {
             stmt.bindLong(1, id);
         }
-
+ 
         String rol_nombre = entity.getRol_nombre();
         if (rol_nombre != null) {
             stmt.bindString(2, rol_nombre);
         }
-
+ 
         String rol_estado = entity.getRol_estado();
         if (rol_estado != null) {
             stmt.bindString(3, rol_estado);
@@ -106,31 +106,31 @@ public class RolDao extends AbstractDao<Rol, Long> {
     @Override
     public Long readKey(Cursor cursor, int offset) {
         return cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0);
-    }
+    }    
 
     @Override
     public Rol readEntity(Cursor cursor, int offset) {
         Rol entity = new Rol( //
-                cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0), // id
-                cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1), // rol_nombre
-                cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2) // rol_estado
+            cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0), // id
+            cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1), // rol_nombre
+            cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2) // rol_estado
         );
         return entity;
     }
-
+     
     @Override
     public void readEntity(Cursor cursor, Rol entity, int offset) {
         entity.setId(cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0));
         entity.setRol_nombre(cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1));
         entity.setRol_estado(cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2));
-    }
-
+     }
+    
     @Override
     protected final Long updateKeyAfterInsert(Rol entity, long rowId) {
         entity.setId(rowId);
         return rowId;
     }
-
+    
     @Override
     public Long getKey(Rol entity) {
         if(entity != null) {
@@ -149,5 +149,5 @@ public class RolDao extends AbstractDao<Rol, Long> {
     protected final boolean isEntityUpdateable() {
         return true;
     }
-
+    
 }

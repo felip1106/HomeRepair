@@ -14,9 +14,13 @@ import javax.inject.Inject;
 import co.com.app.homerepair.component.DaggerAppComponent;
 import co.com.app.homerepair.dao.DaoMaster;
 import co.com.app.homerepair.dao.DaoSession;
-import co.com.app.homerepair.enums.EstadoEnum;
+import co.com.app.homerepair.enums.CategoriaEnum;
+import co.com.app.homerepair.enums.EstadoSolicitudEnum;
 import co.com.app.homerepair.enums.RolEnum;
+import co.com.app.homerepair.model.Categoria;
+import co.com.app.homerepair.model.EstadoSolicitud;
 import co.com.app.homerepair.model.Rol;
+import co.com.app.homerepair.model.Usuarios;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasActivityInjector;
 import dagger.android.support.HasSupportFragmentInjector;
@@ -35,6 +39,9 @@ public class AppController extends Application implements HasActivityInjector, H
     @Inject
     DispatchingAndroidInjector<Fragment> dispatchingAndroidFragmentInjector;
 
+    @Inject
+    Usuarios usuarios;
+
     private DaoSession daoSession;
 
     @Override
@@ -46,21 +53,66 @@ public class AppController extends Application implements HasActivityInjector, H
         Database db = helper.getWritableDb();
         daoSession = new DaoMaster(db).newSession();
 
-        initial();
+        loadEntityInitialDatabase();
+    }
+
+    public Usuarios getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(Usuarios usuarios) {
+        this.usuarios = usuarios;
     }
 
     public DaoSession getDaoSession() {
         return daoSession;
     }
 
-    public void initial() {
-        List<Rol> arrayRoles = new ArrayList<Rol>();
-        arrayRoles.add(new Rol(1L, RolEnum.CLIENTE.name(), EstadoEnum.ACTIVO.name()));
-        arrayRoles.add(new Rol(2L, RolEnum.PROVEEDOR.name(), EstadoEnum.ACTIVO.name()));
+    public void loadEntityInitialDatabase() {
+        addRoles();
+        addCategorias();
+        addEstadosSolicitud();
+    }
 
-        for (Rol rol : arrayRoles) {
-            daoSession.getRolDao().insertOrReplaceInTx(rol);
+    private void addRoles() {
+        List<Rol> roles = new ArrayList<>();
+
+        for (RolEnum rolEnum : RolEnum.values()) {
+            Rol rol = new Rol();
+            rol.setId(rolEnum.id);
+            rol.setRol_nombre(rolEnum.rol);
+            rol.setRol_estado(rolEnum.estado.toString());
+            roles.add(rol);
         }
+
+        daoSession.getRolDao().insertOrReplaceInTx(roles);
+    }
+
+    private void addCategorias() {
+        List<Categoria> categorias = new ArrayList<>();
+
+        for (CategoriaEnum categoriaEnum : CategoriaEnum.values()) {
+            Categoria categoria = new Categoria();
+            categoria.setId(categoriaEnum.id);
+            categoria.setCat_descripcion(categoriaEnum.categoria);
+            categoria.setCat_estado(categoriaEnum.estado.toString());
+            categorias.add(categoria);
+        }
+
+        daoSession.getCategoriaDao().insertOrReplaceInTx(categorias);
+    }
+
+    private void addEstadosSolicitud() {
+        List<EstadoSolicitud> estadosSolicitud = new ArrayList<>();
+
+        for (EstadoSolicitudEnum estadoSolicitudEnum : EstadoSolicitudEnum.values()) {
+            EstadoSolicitud estadoSolicitud = new EstadoSolicitud();
+            estadoSolicitud.setId(estadoSolicitudEnum.id);
+            estadoSolicitud.setEstsol_descripcion(estadoSolicitudEnum.toString());
+            estadosSolicitud.add(estadoSolicitud);
+        }
+
+        daoSession.getEstadoSolicitudDao().insertOrReplaceInTx(estadosSolicitud);
     }
 
     @Override

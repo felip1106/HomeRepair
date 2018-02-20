@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!-- Logo de item de seleccion de imagen -->
+    <ImageView
+        android:id="@+id/icon_item_choose_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/choose_image_margin"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitXY" />
+
+    <!-- Opcion de seleccion de imagen -->
+    <TextView
+        android:id="@+id/message_item_choose_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:layout_gravity="center_vertical"
+        android:textAppearance="?attr/textAppearanceListItem" />
+</LinearLayout>

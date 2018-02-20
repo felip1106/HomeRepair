@@ -135,9 +135,9 @@ public class RegistroActivity extends AppCompatActivity implements IRegistroView
 
     @Override
     public void onRegistroSuccess() {
-        //TODO enviar a la siguiente actividad
         setResult(RESULT_OK, null);
         finish();
+        Toast.makeText(this, R.string.MSG_REGISTRO_USUARIO_EXITO, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -149,10 +149,7 @@ public class RegistroActivity extends AppCompatActivity implements IRegistroView
     public boolean findUsuarioByNombre(String nombre) {
         Usuarios usuario = registroPresenter.findUsuarioByNombre(nombre, application.getApplicationContext());
 
-        if (usuario == null)
-            return false;
-        else
-            return true;
+        return usuario != null;
     }
 
     @Override
@@ -218,8 +215,6 @@ public class RegistroActivity extends AppCompatActivity implements IRegistroView
             registroPresenter.saveRegistroProveedor(proveedor, application.getApplicationContext());
         }
 
-        Toast.makeText(this, R.string.MSG_REGISTRO_USUARIO_EXITO, Toast.LENGTH_SHORT).show();
-
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {
@@ -227,7 +222,6 @@ public class RegistroActivity extends AppCompatActivity implements IRegistroView
                         progressDialog.dismiss();
                     }
                 }, 3000);
-
     }
 
 }
